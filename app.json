@@ -1,23 +1,25 @@
 {
-    "name": "vmvltrshso",
-    "description": "vmvltrshso",
-    "keywords": ["vmvltrshso"],
+    "name": "esp",
+    "description": "",
+    "keywords": ["vmess vless trojan shadowsocks socks"],
     "env": {
-         "PROTOCOL": {
-            "description": "path路径说明:（斜杠/）+（自定义UUID）+（减号-）+（对应协议开头两小写字母：vl或vm或tr或sh或so）",
-            "value": "相关配置说明：http://ygkkk.blogspot.com/2022/05/herokuxrayvless-wsvmess-wstrojan-ws.html",
-             "required": true
+        "AA": {
+            "description": "初阶用户只需修改以下AUUID点击页面最后的Deploy app按钮即可开始部署",
+            "value": "如出现错误，请检查参数格式或多尝试几次。使用自定义参数请务必先充分理解其含义"
         },
-        "SSencryption": {
-            "description": "SS加密方式，可自定义，建议保持默认的chacha20-ietf-poly1305",
-            "value": "chacha20-ietf-poly1305",
-             "required": true
+        "AUUID": {
+            "description": "UUID充当各个配置的路径和账号密码，建议修改和妥善保存,可生成UUID的网站: https://www.uuidgenerator.net",
+            "value": "c51ad79c-12e1-11ed-861d-0242ac120002"
         },
-        "UUID": {
-            "description": "请输入自定义UUID（vless-ws与vmess-ws为用户ID，trojan-ws与shadowsocks-ws为密码，socks5-ws用户名密码为空）",
-            "value": "",
-            "required": true
-        }  
+        "CADDYIndexPage": {
+            "description": "自定义CADDY部署完成后点击View的显示页面，参考readme.md中的（5：Caddy主页配置）",
+            "value": "https://raw.githubusercontent.com/caddyserver/dist/master/welcome/index.html"
+        },
+        "ParameterSSENCYPT": {
+            "description": "SS加密方式，查看支持协议: https://www.v2fly.org/config/protocols/shadowsocks.html",
+            "value": "chacha20-ietf-poly1305"
+        }
     },
+    "repository": "",
     "stack": "container"
 }
